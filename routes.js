@@ -25,7 +25,7 @@ routes.post('/', (req, res) => {
 routes.delete('/:id', (req, res) => {
     req.getConnection((err, conn) => {
         if (err) return res.send(err)
-        conn.query('delect  *from empleados where id = ?',[req.params.id], (err, rows) => {
+        conn.query('delete  *from empleados where id = ?',[req.params.id], (err, rows) => {
             if (err) return res.send(err)
             res.send('se eleiminado correctamente')
         })
